@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width; height=device-height; initial-scale=1; user-scalable=no;">
+<script language="javascript">
+i = 0
+var speed = 2
+function scroll() {
+i = i + speed
+var div = document.getElementById("news")
+div.scrollTop = i
+if (i > div.scrollHeight - 100) {i = 0}
+t1=setTimeout("scroll()",80)
+}
+</script>
+<script type="text/javascript">
+
+var image1 = new Image()
+image1.src="file:///android_asset/image/003.jpg"
+var image2 = new Image()
+image2.src="file:///android_asset/image/005.jpg"
+var image3 = new Image()
+image3.src="file:///android_asset/image/014.jpg"
+var image4 = new Image()
+image4.src="file:///android_asset/image/025.jpg"
+var image5 = new Image()
+image5.src="file:///android_asset/image/026.jpg"
+var image6 = new Image()
+image6.src="file:///android_asset/image/027.jpg"
+</script>
+
+</head>
+<body background="file:///android_asset/image/background.jpg" onload="scroll()" style="padding:0px;">
+<div width="100%" style="border:solid green 5px;padding:0px; height:100%;margin-top:0em;">
+<img src="file:///android_asset/image/logo1.png" height="15%" width="100%" >
+     <img src="file:///android_asset/image/003.jpg" height="40%" width="100%" name="slide" >
+     <div style="border: solid #137F17;height:25px;background-color:#EC521A;color:white;font-size:21px;text-align:center;">
+<span>About Me</span>
+</div>
+     <div  style="width:100%;background:#F8B194;border:1px solid #137F17;margin-top:2px;overflow-y:scroll; height:200px;" id="news">
+<p style="font-family:Comic Sans MS;color:#000000;font-size:18px; margin-left:5px;">
+Dhananjai Singh is a member of the Bhartiya Janta Party and takes active part in politics. 
+He has actively campaigned for the BJP in the past state Assembly elections and participates in various BJP campaigns. 
+Since a tender age, Dhananjai has been actively involved in various social causes.. <span style="color: #034b83;"><a href="file:///android_asset/www/biography.html" target="myframe">Read More..&gt;&gt;</a></span>
+</p>
+</div>
+<script type="text/javascript">
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<6){
+step++
+}
+else
+step=1
+setTimeout("slideit()",4000)
+}
+slideit()
+</script>
+</div>  
+
+</body>
+
+
+
+
+
+
+</html>

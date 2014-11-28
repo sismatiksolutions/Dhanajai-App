@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>
+Dhananjai Singh Khimsar
+</title>
+<link rel="stylesheet" href="file:///android_asset/www/jquery.mobile-1.4.3.min.css" />
+<script src="file:///android_asset/www/jquery-1.11.1.min.js"></script>
+<script src="file:///android_asset/www/jquery.mobile-1.4.4.min.js"></script>
+<style type="text/css">
+#demo-page :not(INPUT):not(TEXTAREA) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* Content styling. */
+dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
+dt { font-size: 2em; font-weight: bold; }
+dt span { font-size: .5em; color: #777; margin-left: .5em; }
+dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #00FF00; }
+.back-btn { float: right; margin: 0 2em 1em 0; }
+</style>
+<script language="javascript">
+ $( document ).on( "pagecreate", "#demo-page", function() {
+    $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+       
+        if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft" ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
+});
+</script>
+<script language="javascript">
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+
+}
+</script>
+<script language="javascript">
+i = 0
+var speed = 2
+function scroll() {
+i = i + speed
+var div = document.getElementById("news")
+div.scrollTop = i
+if (i > div.scrollHeight - 100) {i = 0}
+t1=setTimeout("scroll()",100)
+}
+</script>
+<script type="text/javascript">
+
+var image1 = new Image()
+image1.src="file:///android_asset/image/003.jpg"
+var image2 = new Image()
+image2.src="file:///android_asset/image/005.jpg"
+var image3 = new Image()
+image3.src="file:///android_asset/image/014.jpg"
+var image4 = new Image()
+image4.src="file:///android_asset/image/025.jpg"
+var image5 = new Image()
+image5.src="file:///android_asset/image/026.jpg"
+var image6 = new Image()
+image6.src="file:///android_asset/image/027.jpg"
+</script>
+</head>
